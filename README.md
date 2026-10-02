@@ -1,8 +1,6 @@
 # Openhab-datenerfassung-ortsnetz-auslastung
 Script zur Datenübermittlung aus Openhab ab Version 4  für das Projekt https://github.com/thomaslehmann1234/datenerfassung-ortsnetz-auslastung
 
-# Openhab-datenerfassung-ortsnetz-auslastung
-
 Dieses Projekt ermöglicht die automatische Erfassung von Spannungsdaten deines Smartmeters in openHAB und sendet diese zyklisch an das Ortsnetz-Auslastungs-Monitoring. Das integrierte Installations-Skript übernimmt die Einrichtung aller Dateien sowie das automatische Rechtemanagement.
 
 ## 📋 Voraussetzungen
