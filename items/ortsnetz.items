@@ -1,0 +1,13 @@
+Number Smartmeter_L1_Volt "Phase 1 [%.1f V]"
+Number Smartmeter_L2_Volt "Phase 2 [%.1f V]"
+Number Smartmeter_L3_Volt "Phase 3 [%.1f V]"
+Number Smartmeter_Frequenz "Herz [%.1f Hz]"
+String Ortsnetz_L1_Ampel
+String Ortsnetz_L2_Ampel
+String Ortsnetz_L3_Ampel
+String Ortsnetz_Overall_Ampel
+String Ortsnetz_API_Status
+String Ortsnetz_Debug_Payload
+String Ortsnetz_Speicherladeempfehlung
+DateTime Ortsnetz_API_Timestamp "letzte Meldung [%1$td.%1$tm. %1$tH:%1$tM]"
+Number Smartmeter_PV_KWP "installierte KWp [%.3f KWp]"
