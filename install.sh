@@ -6,7 +6,8 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-BASE_URL="https://raw.githubusercontent.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/v0.2.3"
+
+BASE_URL="https://github.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/releases/download/v0.2.3"
 
 # 2. openHAB-Verzeichnis ermitteln
 if [ -d "/srv/openhab-conf" ]; then
