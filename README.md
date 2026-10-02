@@ -9,7 +9,7 @@ Bevor du das Skript installierst, stelle bitte sicher, dass die JavaScript-Unter
 1. Öffne deine **openHAB MainUI** im Browser.
 2. Navigiere zu **Einstellungen** ➔ **Automation**.
 3. Installiere dort das Add-on **JavaScript Scripting (GraalVM)**.
-
+4. Prüfe, ob bei Dir JSONPath installiert ist, dieses wird benötigt
 ---
 
 ## 🚀 Automatische Installation
