@@ -6,8 +6,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-# Feste Basis-URL zu den Raw-Dateien deiner Version v0.2.2 auf GitHub
-BASE_URL="https://githubusercontent.com"
+BASE_URL="https://githubusercontent.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/"
 
 # 2. openHAB-Verzeichnis ermitteln (openHAB 4+ verwendet /srv/openhab-conf)
 if [ -d "/srv/openhab-conf" ]; then
