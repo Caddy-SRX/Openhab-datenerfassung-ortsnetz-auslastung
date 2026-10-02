@@ -19,7 +19,7 @@ Du kannst alle benötigten JS-Rules, Items und Hilfsskripte mit einem einzigen B
 Führe dazu einfach diesen Befehl aus:
 
 ```bash
-wget -O install.sh https://raw.githubusercontent.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/install.sh | sudo bash
+wget -qO install.sh https://raw.githubusercontent.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/v0.2.2/install.sh | sudo bash
 
 ```
 
