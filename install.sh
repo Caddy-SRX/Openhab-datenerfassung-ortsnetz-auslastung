@@ -22,6 +22,7 @@ echo "  Zielverzeichnis: $OH_CONF"
 echo "==========================================="
 
 # 3. VORAUSSETZUNGEN PRÜFEN
+# Prüfung auf JS/Node.js
 echo -n "Prüfe auf JS/Node.js-Unterstützung... "
 if command -v node >/dev/null 2>&1; then
   NODE_VERSION=$(node -v)
@@ -32,12 +33,31 @@ else
   exit 1
 fi
 
-echo -n "Prüfe auf Regex-Unterstützung (grep)... "
-if command -v grep >/dev/null 2>&1; then
-  echo "✅ Gefunden"
+# Prüfung auf JSONPath Addon in der addons.cfg
+echo -n "Prüfe auf JSONPath Transformation...    "
+ADDONS_FILE="$OH_CONF/services/addons.cfg"
+if [ -f "$ADDONS_FILE" ] && grep -q "jsonpath" "$ADDONS_FILE"; then
+  echo "✅ Aktiviert (in addons.cfg)"
 else
-  echo "❌ Nicht gefunden!"
-  exit 1
+  echo "⚠️  Hinweis"
+  echo "------------------------------------------------------------------------"
+  echo " Bitte stelle sicher, dass 'JSONPath Transformation' installiert ist:"
+  echo " UI: Einstellungen -> Transformationen -> JSONPath Transformation"
+  echo " Oder in $OH_CONF/services/addons.cfg bei transformation = jsonpath"
+  echo "------------------------------------------------------------------------"
+fi
+
+# Prüfung auf Exec Binding in der addons.cfg
+echo -n "Prüfe auf Exec Binding...               "
+if [ -f "$ADDONS_FILE" ] && grep -q "exec" "$ADDONS_FILE"; then
+  echo "✅ Aktiviert (in addons.cfg)"
+else
+  echo "⚠️  Hinweis"
+  echo "------------------------------------------------------------------------"
+  echo " Bitte stelle sicher, dass das 'Exec Binding' installiert ist:"
+  echo " UI: Einstellungen -> Bindings -> Exec Binding"
+  echo " Oder in $OH_CONF/services/addons.cfg bei binding = exec"
+  echo "------------------------------------------------------------------------"
 fi
 
 echo "-------------------------------------------"
