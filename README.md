@@ -40,11 +40,22 @@ Kommentiere dort die folgenden vier Standard-Items aus (setze `//` an den Zeilen
 * `Smartmeter_L3_Volt`
 * `Smartmeter_Frequenz`
 
+
 ### 2️⃣ JS-Datei kontrollieren
 Falls du deine eigenen Items im ersten Schritt auskommentiert hast, öffne die Regel-Datei:
 📂 `/srv/openhab-conf/automation/js/ortsnetz.js`
 
 Passe dort die Item-Namen im Code an, damit das Skript deine echten, bereits vorhandenen Smartmeter-Kanäle anspricht.
+
+```
+execute: () => {
+        // 1. Pflicht-Items einlesen
+        const itemL1 = items.getItem('Smartmeter_L1_Volt');
+        const itemL2 = items.getItem('Smartmeter_L2_Volt');
+        const itemL3 = items.getItem('Smartmeter_L3_Volt');
+        const itemHz = items.getItem('Smartmeter_Frequenz');
+```
+
 
 ### 3️⃣ Regel in der GUI prüfen
 Öffne deine **openHAB MainUI** im Browser und gehe zu **Einstellungen** ➔ **Rules (Regeln)**. Dort findest du nun die aktivierte Regel:
