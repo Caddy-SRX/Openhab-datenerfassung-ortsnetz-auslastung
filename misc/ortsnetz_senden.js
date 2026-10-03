@@ -12,8 +12,8 @@ const rawKwp = args[4];
 const rawForecast = args[5];
 const rawSmartmeterModel = args[8];
 
-const rawLat = parseFloat(args[6]) || 53.164100;
-const rawLon = parseFloat(args[7]) || 7.336100;
+const rawLat = parseFloat(args[6]) || 53.000000;
+const rawLon = parseFloat(args[7]) || 7.000000;
 
 const lat = parseFloat(rawLat.toFixed(6));
 const lon = parseFloat(rawLon.toFixed(6));
