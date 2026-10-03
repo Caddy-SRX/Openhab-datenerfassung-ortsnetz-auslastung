@@ -7,7 +7,7 @@ Dieses Projekt ermöglicht die automatische Erfassung von Spannungsdaten deines 
 
 Bevor du das Skript installierst, stelle bitte sicher, dass die JavaScript-Unterstützung in openHAB aktiv ist:
 1. Öffne deine **openHAB MainUI** im Browser.
-2. Navigiere zu **Einstellungen** ➔ **Automation**.
+2. Navigiere zu **Add-on Store**.
 3. Installiere dort das Add-on **JavaScript Scripting (GraalVM)**.
 4. Prüfe, ob bei Dir JSONPath installiert ist, dieses wird benötigt
 ---
@@ -20,6 +20,7 @@ Führe dazu einfach diesen Befehl aus:
 
 ```bash
 wget -qO install.sh https://raw.githubusercontent.com/Caddy-SRX/Openhab-datenerfassung-ortsnetz-auslastung/master/install.sh | sudo bash
+sudo bash install.sh
 
 ```
 
