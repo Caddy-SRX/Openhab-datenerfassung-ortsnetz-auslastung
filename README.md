@@ -31,7 +31,7 @@ Das Skript legt alle Dateien an den korrekten Orten ab, setzt die Besitzrechte a
 
 ### 1️⃣ Items anpassen
 Falls du bereits eigene Smartmeter-Items in openHAB verwendest, öffne die neu angelegte Datei:
-📂 `/etc/openhab/items/ortsnetz.items`
+📂 `/srv/openhab-conf/items/ortsnetz.items`
 
 Kommentiere dort die folgenden vier Standard-Items aus (setze `//` an den Zeilenanfang), wenn sie mit deinen bestehenden Items kollidieren:
 * `Smartmeter_L1_Volt`
@@ -41,7 +41,7 @@ Kommentiere dort die folgenden vier Standard-Items aus (setze `//` an den Zeilen
 
 ### 2️⃣ JS-Datei kontrollieren
 Falls du deine eigenen Items im ersten Schritt auskommentiert hast, öffne die Regel-Datei:
-📂 `/etc/openhab/automation/js/ortsnetz.js`
+📂 `/srv/openhab-conf/automation/js/ortsnetz.js`
 
 Passe dort die Item-Namen im Code an, damit das Skript deine echten, bereits vorhandenen Smartmeter-Kanäle anspricht.
 
