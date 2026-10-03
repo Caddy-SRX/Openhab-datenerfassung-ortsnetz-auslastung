@@ -48,7 +48,7 @@ rules.JSRule({
         }
 
         // 2. Optionale PV-Items einlesen
-        let kwp = "1.89";
+        let kwp = "10";
         let forecast = "";
         
         try {
