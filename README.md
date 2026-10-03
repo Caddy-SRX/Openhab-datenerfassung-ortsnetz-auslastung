@@ -9,7 +9,7 @@ Bevor du das Skript installierst, stelle bitte sicher, dass die JavaScript-Unter
 1. Öffne deine **openHAB MainUI** im Browser.
 2. Navigiere zu **Add-on Store**.
 3. Installiere dort das Add-on **JavaScript Scripting (GraalVM)**.
-4. Prüfe, ob bei Dir JSONPath installiert ist, dieses wird benötigt
+4. Prüfe, ob bei Dir **JSONPath** installiert ist, dieses wird benötigt
 ---
 
 ## 🚀 Automatische Installation
@@ -60,6 +60,10 @@ execute: () => {
 ### 3️⃣ Regel in der GUI prüfen
 Öffne deine **openHAB MainUI** im Browser und gehe zu **Einstellungen** ➔ **Rules (Regeln)**. Dort findest du nun die aktivierte Regel:
 👉 *„Spannungsdaten alle 5 Minuten an Ortsnetz-Auslastung senden“*
+
+Die Rückmeldungen werden in die angelegten Items durch die Regel geschrieben. 
+<img width="494" height="334" alt="image" src="https://github.com/user-attachments/assets/6dff6b59-d392-4d3a-a683-bbe54aa5b942" />
+
 
 ---
 
