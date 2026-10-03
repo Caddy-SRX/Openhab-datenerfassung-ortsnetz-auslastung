@@ -27,8 +27,8 @@ rules.JSRule({
         const hz = itemHz.state;
 
         // Globalen openHAB-Standort ermitteln
-        let latitude = "53.1639462";   // Fallback-Wert
-        let longitude = "7.335782";   // Fallback-Wert
+        let latitude = "53.000000";   // Fallback-Wert
+        let longitude = "7.000000";   // Fallback-Wert
 
         try {
             const { osgi } = require('openhab');
