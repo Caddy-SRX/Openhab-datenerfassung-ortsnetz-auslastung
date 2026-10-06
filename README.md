@@ -52,10 +52,10 @@ Passe dort die Item-Namen im Code an, damit das Skript deine echten, bereits vor
 ```
 execute: () => {
         // 1. Pflicht-Items einlesen
-        const itemL1 = items.getItem('**Smartmeter_L1_Volt**');
-        const itemL2 = items.getItem('**Smartmeter_L2_Volt**');
-        const itemL3 = items.getItem('**Smartmeter_L3_Volt**');
-        const itemHz = items.getItem('**Smartmeter_Frequenz**');
+        const itemL1 = items.getItem('Smartmeter_L1_Volt');
+        const itemL2 = items.getItem('Smartmeter_L2_Volt');
+        const itemL3 = items.getItem('Smartmeter_L3_Volt');
+        const itemHz = items.getItem('Smartmeter_Frequenz');
 ```
 
 
