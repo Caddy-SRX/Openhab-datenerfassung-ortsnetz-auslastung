@@ -32,6 +32,7 @@ Das Skript legt alle Dateien an den korrekten Orten ab, setzt die Besitzrechte a
 
 ### 1️⃣ Items anpassen
 Falls du bereits eigene Smartmeter-Items in openHAB verwendest, öffne die neu angelegte Datei:
+Editiere die Dateien als root, also z.B. sudo nano
 📂 `/srv/openhab-conf/items/ortsnetz.items`
 
 Kommentiere dort die folgenden vier Standard-Items aus (setze `//` an den Zeilenanfang), wenn sie mit deinen bestehenden Items kollidieren:
@@ -40,9 +41,10 @@ Kommentiere dort die folgenden vier Standard-Items aus (setze `//` an den Zeilen
 * `Smartmeter_L3_Volt`
 * `Smartmeter_Frequenz`
 
+speichere die Änderungen mit **strg+o** und verlasse nano mit **strg+x**
 
 ### 2️⃣ JS-Datei kontrollieren
-Falls du deine eigenen Items im ersten Schritt auskommentiert hast, öffne die Regel-Datei:
+Falls du deine eigenen Items hast und im ersten Schritt die Standard Items auskommentiert hast, öffne die Regel-Datei:
 📂 `/srv/openhab-conf/automation/js/ortsnetz.js`
 
 Passe dort die Item-Namen im Code an, damit das Skript deine echten, bereits vorhandenen Smartmeter-Kanäle anspricht.
@@ -50,15 +52,15 @@ Passe dort die Item-Namen im Code an, damit das Skript deine echten, bereits vor
 ```
 execute: () => {
         // 1. Pflicht-Items einlesen
-        const itemL1 = items.getItem('Smartmeter_L1_Volt');
-        const itemL2 = items.getItem('Smartmeter_L2_Volt');
-        const itemL3 = items.getItem('Smartmeter_L3_Volt');
-        const itemHz = items.getItem('Smartmeter_Frequenz');
+        const itemL1 = items.getItem('**Smartmeter_L1_Volt**');
+        const itemL2 = items.getItem('**Smartmeter_L2_Volt**');
+        const itemL3 = items.getItem('**Smartmeter_L3_Volt**');
+        const itemHz = items.getItem('**Smartmeter_Frequenz**');
 ```
 
 
 ### 3️⃣ Regel in der GUI prüfen
-Öffne deine **openHAB MainUI** im Browser und gehe zu **Einstellungen** ➔ **Rules (Regeln)**. Dort findest du nun die aktivierte Regel:
+Öffne deine **openHAB MainUI** im Browser und gehe zu **Einstellungen** ➔ **Rules**. Dort findest du nun die aktivierte Regel:
 👉 *„Spannungsdaten alle 5 Minuten an Ortsnetz-Auslastung senden“*
 
 Die Rückmeldungen werden in die angelegten Items durch die Regel geschrieben. 
