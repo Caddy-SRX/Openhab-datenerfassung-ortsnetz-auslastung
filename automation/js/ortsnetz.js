@@ -115,7 +115,7 @@ rules.JSRule({
                     items.getItem('Ortsnetz_L2_Ampel').postUpdate(resData.status.l2.trim());
                     items.getItem('Ortsnetz_L3_Ampel').postUpdate(resData.status.l3.trim());
                     items.getItem('Ortsnetz_Overall_Ampel').postUpdate(resData.status.overall.trim());
-                    items.getItem('Ortsnetz_Speicherladeempfehlung').postUpdate(resData.storage_recommendation.trim();
+                    items.getItem('Ortsnetz_Speicherladeempfehlung').postUpdate(resData.storage_recommendation.trim());
 
                     items.getItem('Ortsnetz_API_Status').postUpdate('Erfolgreich');
                     items.getItem("Ortsnetz_API_Timestamp").postUpdate(time.ZonedDateTime.now().toString());
